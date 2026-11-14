@@ -110,6 +110,12 @@ section{padding-block:clamp(80px,10vw,140px)}
 .sign b{display:block;font-family:var(--display);font-size:25px;font-weight:400;line-height:1.1}
 .sign span{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-3)}
 .frame{aspect-ratio:4/5;max-width:100%;background:var(--img,linear-gradient(160deg,var(--blush),var(--paper-2)));position:relative;display:grid;place-items:center;overflow:hidden}
+.portrait-wrap{position:relative;isolation:isolate;margin:0;min-width:0}
+.portrait-wrap::before{content:"";position:absolute;inset:22px -22px auto 22px;aspect-ratio:4/5;background:var(--peony);border-radius:999px 999px 0 0;z-index:-1}
+.portrait-wrap .frame{border-radius:999px 999px 0 0}
+.portrait-wrap figcaption{margin-top:40px;display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.portrait-wrap figcaption b{font-family:var(--display);font-style:italic;font-weight:400;font-size:26px;color:var(--ink)}
+.portrait-wrap figcaption span{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--raspberry)}
 .frame .mono{font-family:var(--display);font-style:italic;font-size:clamp(110px,14vw,200px);color:var(--white);line-height:1}
 .frame figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 20px 16px;background:linear-gradient(transparent,rgba(247,241,238,.9));font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--ink-2);display:flex;justify-content:space-between}
 @media(max-width:860px){.manifesto{grid-template-columns:1fr}.manifesto .frame{max-width:420px}}
@@ -147,7 +153,12 @@ section{padding-block:clamp(80px,10vw,140px)}
 .team-sec .team{border-color:rgba(255,251,248,.25)}
 .team-sec .medal{background:transparent;border-color:var(--peony);color:var(--peony)}
 .team{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line-2)}
-.t{padding:36px 28px 8px 0;display:grid;gap:14px;align-content:start;min-width:0}
+.t{padding:44px 0 8px;display:grid;gap:14px;align-content:start;min-width:0}
+.team{column-gap:clamp(20px,2.4vw,36px)}
+.t .pic{position:relative;aspect-ratio:3/4;max-width:100%;border-radius:999px 999px 0 0;overflow:hidden;background:var(--img,linear-gradient(165deg,#8a2a40,var(--wine-deep)));display:grid;place-items:center;margin-bottom:10px;box-shadow:0 0 0 1px rgba(242,196,205,.35);outline:1px solid rgba(242,196,205,.25);outline-offset:8px;transition:outline-offset .6s var(--ease)}
+.t:hover .pic{outline-offset:14px}
+.t .pic span{font-family:var(--display);font-style:italic;font-weight:300;font-size:clamp(56px,5vw,80px);color:var(--peony)}
+.t.founder .pic{outline-color:var(--gold-soft)}
 .t .medal{width:112px;height:112px;font-size:40px}
 .medal.photo{background:var(--img) center/cover no-repeat;border:2px solid var(--peony)}
 .team-sec .t.founder .medal.photo{background:var(--img) center/cover no-repeat;border-color:var(--gold-soft);box-shadow:0 0 0 6px var(--wine),0 0 0 7px rgba(217,184,119,.6)}
@@ -156,7 +167,7 @@ section{padding-block:clamp(80px,10vw,140px)}
 .t h3{font-size:clamp(28px,2.4vw,36px);font-weight:400}
 .t p{color:var(--ink-2);font-size:15px}
 @media(max-width:960px){.team{grid-template-columns:1fr 1fr}}
-@media(max-width:480px){.team{grid-template-columns:1fr}.t{padding-right:0}}
+@media(max-width:480px){.team{grid-template-columns:1fr}.t .pic{max-width:320px}}
 
 /* standards */
 .std{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line-2)}
@@ -272,8 +283,9 @@ footer{padding-block:56px 28px;overflow:hidden;border-top:1px solid var(--line)}
           <div><b>Вероника Быстрова</b><span>Основательница Maison</span></div>
         </div>
       </div>
-      <figure class="frame" id="about-frame" role="img" aria-label="Вероника Быстрова, основательница школы" style="margin:0;--img:url(img/veronika-full.webp) center/cover no-repeat">
-        <figcaption><span>Вероника Быстрова</span><span>Основательница</span></figcaption>
+      <figure class="portrait-wrap">
+        <div class="frame" role="img" aria-label="Вероника Быстрова, основательница школы" style="--img:url(img/veronika-arch.webp) center 20%/cover no-repeat"></div>
+        <figcaption><b>Вероника Быстрова</b><span>Основательница</span></figcaption>
       </figure>
     </div>
   </section>
@@ -329,25 +341,25 @@ footer{padding-block:56px 28px;overflow:hidden;border-top:1px solid var(--line)}
       </div>
       <div class="team">
         <article class="t founder">
-          <div class="medal photo" role="img" aria-label="Вероника Быстрова" style="--img:url(img/veronika.webp)"></div>
+          <div class="pic" role="img" aria-label="Вероника Быстрова" style="--img:url(img/veronika-portrait.webp) center/cover no-repeat"></div>
           <p class="cap">Основательница · English</p>
           <h3>Вероника Быстрова</h3>
           <p>Создала школу и лично отбирает каждого преподавателя.</p>
         </article>
         <article class="t">
-          <div class="medal photo" role="img" aria-label="Полина, преподаватель итальянского и английского" style="--img:url(img/polina.webp)"></div>
+          <div class="pic" role="img" aria-label="Полина, преподаватель итальянского и английского" style="--img:url(img/polina-portrait.webp) center/cover no-repeat"></div>
           <p class="cap">Italiano · English</p>
           <h3>Полина</h3>
           <p>Больше 10 лет преподаёт. Окончила МГЛУ и Università degli Studi di Milano. Готовит к поступлению в итальянские вузы, ведёт итальянский и английский для жизни, занимается с детьми.</p>
         </article>
         <article class="t">
-          <div class="medal">ЛГ</div>
+          <div class="pic" aria-hidden="true"><span>ЛГ</span></div>
           <p class="cap">Español · носитель</p>
           <h3>Лусия Гарсия</h3>
           <p>Из Мадрида. Испанский для жизни, работы и экзамена DELE.</p>
         </article>
         <article class="t">
-          <div class="medal">ОГ</div>
+          <div class="pic" aria-hidden="true"><span>ОГ</span></div>
           <p class="cap"><span lang="ja">日本語</span> · English</p>
           <h3>Ольга Гуринович</h3>
           <p>Ведёт японский и английский.</p>
