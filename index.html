@@ -152,7 +152,7 @@ section{padding-block:clamp(80px,10vw,140px)}
 .team-sec em,.team-sec .cap{color:var(--gold-soft)}
 .team-sec .team{border-color:rgba(255,251,248,.25)}
 .team-sec .medal{background:transparent;border-color:var(--peony);color:var(--peony)}
-.team{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line-2)}
+.team{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line-2)}
 .t{padding:44px 0 8px;display:grid;gap:14px;align-content:start;min-width:0}
 .team{column-gap:clamp(20px,2.4vw,36px)}
 .t .pic{position:relative;aspect-ratio:3/4;max-width:100%;border-radius:999px 999px 0 0;overflow:hidden;background:var(--img,linear-gradient(165deg,#8a2a40,var(--wine-deep)));display:grid;place-items:center;margin-bottom:10px;box-shadow:0 0 0 1px rgba(242,196,205,.35);outline:1px solid rgba(242,196,205,.25);outline-offset:8px;transition:outline-offset .6s var(--ease)}
@@ -166,8 +166,7 @@ section{padding-block:clamp(80px,10vw,140px)}
 .team-sec .t.founder .medal{background:var(--gold-soft);color:var(--wine-deep);border-color:var(--gold-soft)}
 .t h3{font-size:clamp(28px,2.4vw,36px);font-weight:400}
 .t p{color:var(--ink-2);font-size:15px}
-@media(max-width:960px){.team{grid-template-columns:1fr 1fr}}
-@media(max-width:480px){.team{grid-template-columns:1fr}.t .pic{max-width:320px}}
+@media(max-width:700px){.team{grid-template-columns:1fr}.t .pic{max-width:340px}}
 
 /* standards */
 .std{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line-2)}
@@ -342,21 +341,15 @@ footer{padding-block:56px 28px;overflow:hidden;border-top:1px solid var(--line)}
       <div class="team">
         <article class="t founder">
           <div class="pic" role="img" aria-label="Вероника Быстрова" style="--img:url(img/veronika-portrait.webp) center/cover no-repeat"></div>
-          <p class="cap">Основательница · English</p>
+          <p class="cap">Основательница · English · Español</p>
           <h3>Вероника Быстрова</h3>
-          <p>Создала школу и лично отбирает каждого преподавателя.</p>
+          <p>Создала школу и лично отбирает каждого преподавателя. Ведёт английский и испанский.</p>
         </article>
         <article class="t">
           <div class="pic" role="img" aria-label="Полина, преподаватель итальянского и английского" style="--img:url(img/polina-portrait.webp) center/cover no-repeat"></div>
           <p class="cap">Italiano · English</p>
           <h3>Полина</h3>
           <p>Больше 10 лет преподаёт. Окончила МГЛУ и Università degli Studi di Milano. Готовит к поступлению в итальянские вузы, ведёт итальянский и английский для жизни, занимается с детьми.</p>
-        </article>
-        <article class="t">
-          <div class="pic" aria-hidden="true"><span>ЛГ</span></div>
-          <p class="cap">Español · носитель</p>
-          <h3>Лусия Гарсия</h3>
-          <p>Из Мадрида. Испанский для жизни, работы и экзамена DELE.</p>
         </article>
         <article class="t">
           <div class="pic" aria-hidden="true"><span>ОГ</span></div>
