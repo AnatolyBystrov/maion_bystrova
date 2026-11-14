@@ -149,6 +149,8 @@ section{padding-block:clamp(80px,10vw,140px)}
 .team{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line-2)}
 .t{padding:36px 28px 8px 0;display:grid;gap:14px;align-content:start;min-width:0}
 .t .medal{width:112px;height:112px;font-size:40px}
+.medal.photo{background:var(--img) center/cover no-repeat;border:2px solid var(--peony)}
+.team-sec .t.founder .medal.photo{background:var(--img) center/cover no-repeat;border-color:var(--gold-soft);box-shadow:0 0 0 6px var(--wine),0 0 0 7px rgba(217,184,119,.6)}
 .t .medal.photo{background:var(--img) center/cover no-repeat;border:2px solid var(--peony);box-shadow:0 0 0 6px var(--wine),0 0 0 7px rgba(242,196,205,.45)}
 .team-sec .t.founder .medal{background:var(--gold-soft);color:var(--wine-deep);border-color:var(--gold-soft)}
 .t h3{font-size:clamp(28px,2.4vw,36px);font-weight:400}
@@ -266,12 +268,12 @@ footer{padding-block:56px 28px;overflow:hidden;border-top:1px solid var(--line)}
         <p class="cap" style="margin-bottom:28px">О школе</p>
         <p class="big">Мы верим, что язык — часть вашего <em>стиля</em>. Его подбирают так же внимательно, как гардероб: по характеру, по случаю, по жизни, которую вы ведёте. Поэтому у нас нет групп и случайных учителей. Есть вы, ваш преподаватель и язык, который <em>звучит как вы</em>.</p>
         <div class="sign">
-          <div class="medal">ВБ</div>
+          <div class="medal photo" role="img" aria-label="Вероника Быстрова" style="--img:url(img/veronika.webp)"></div>
           <div><b>Вероника Быстрова</b><span>Основательница Maison</span></div>
         </div>
       </div>
-      <figure class="frame" id="about-frame" role="img" aria-label="Розовое кресло и ноутбук в светлой гостиной" style="margin:0;--img:url(img/salon-chair.webp) center/cover no-repeat">
-        <figcaption><span>Maison Bystrova</span><span>Online</span></figcaption>
+      <figure class="frame" id="about-frame" role="img" aria-label="Вероника Быстрова, основательница школы" style="margin:0;--img:url(img/veronika-full.webp) center/cover no-repeat">
+        <figcaption><span>Вероника Быстрова</span><span>Основательница</span></figcaption>
       </figure>
     </div>
   </section>
@@ -327,7 +329,7 @@ footer{padding-block:56px 28px;overflow:hidden;border-top:1px solid var(--line)}
       </div>
       <div class="team">
         <article class="t founder">
-          <div class="medal">ВБ</div>
+          <div class="medal photo" role="img" aria-label="Вероника Быстрова" style="--img:url(img/veronika.webp)"></div>
           <p class="cap">Основательница · English</p>
           <h3>Вероника Быстрова</h3>
           <p>Создала школу и лично отбирает каждого преподавателя.</p>
